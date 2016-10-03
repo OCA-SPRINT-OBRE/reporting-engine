@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+     <template id="website_empty_snippet" name="Empty snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/website_empty_snippet/static/img/blocks/block_title.png"/>
+                    <span class="oe_snippet_thumbnail_title">Empty snippet</span>
+                </div>
+                <section class="oe_snippet_body emptysnippet" data-screen-name="OpenERP" data-limit="15">
+                  
+                      
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+
+</data>
+</openerp>
+

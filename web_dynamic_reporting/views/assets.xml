@@ -1,0 +1,14 @@
+<openerp>
+<data>
+<template id="web_dynamic_reporting_style" name="Web dynamic Reporting Style" inherit_id="website.assets_frontend">
+    <xpath expr="link[last()]" position="after">
+        <link href="/web_dynamic_reporting/static/less/style.less" rel="stylesheet" type="text/less"/>
+    </xpath>
+</template>
+<template id="my_js" inherit_id="website.assets_editor" name="My Js">
+  <xpath expr="script[last()]" position="after">
+    <script type="text/javascript" src="/theme_tutorial/static/src/js/tutorial_editor.js" />
+  </xpath>
+</template>
+</data>
+</openerp>

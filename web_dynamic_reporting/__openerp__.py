@@ -9,7 +9,9 @@
 
     # templates, pages, and snippets
     'data': [
+        'views/assets.xml',
         'views/snippets.xml',
+        'views/options.xml',
    ],
     'demo': [],
     'qweb': [],

@@ -1,6 +1,18 @@
 <openerp>
-    <data>
-     
-    
-    </data>
+<data>
+    <template id="website_empty_snippet_opt" name="Snippet Empty Options" inherit_id="website.snippet_options">
+      <xpath expr="//div[@data-js='background']" position="inside">
+        <li class="dropdown-submenu">
+            
+                <a href="#">Options</a>
+                <ul class="dropdown-menu">
+                    <t t-foreach="res_company._fields" t-as="fields">
+                        <li><span t-esc="fields"/></li>
+                    </t>
+                </ul>
+           
+        </li>
+      </xpath>
+    </template>
+</data>
 </openerp>

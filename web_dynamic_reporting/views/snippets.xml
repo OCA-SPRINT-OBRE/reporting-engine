@@ -86,6 +86,25 @@
             </div>
         </xpath>
     </template>
+    <template id="web_dynamic_logo_snippet" name="Web Dynamic Logo Snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/web_dynamic_reporting/static/img/blocks/block_big_picture.png"/>
+                    <span class="oe_snippet_thumbnail_title">Web Dynamic Logo Snippet</span>
+                </div>
+                <section class="oe_snippet_body emptysnippet" data-screen-name="OpenERP" data-limit="15">
+                    <div class="col-md-3">
+                        <table class="table table-condensed" style="width:100%">
+<!--                      <tr>
+                            <th><img src="/web_dynamic_reporting/static/img/blocks/block_big_picture.png"></th>
+                          </tr> -->
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
 </data>
 </openerp>
 

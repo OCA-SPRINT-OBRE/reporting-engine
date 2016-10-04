@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     # Theme information
-    'name': "Snippet flexslider ",
+    'name': "Web Dynamic Reporting",
     'description': """
     """,
     'version': '1.0',
@@ -17,6 +17,6 @@
     'qweb': [],
     # Your information
     'installable':True,
-    'author': "Jean-Michel Abé",
+    'author': "OCA-SPRINT-OBRE",
     'website': "",
 }

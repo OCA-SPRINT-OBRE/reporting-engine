@@ -1,19 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 <data>
-     <template id="website_empty_snippet" name="Empty snippet" inherit_id="website.snippets">
+     <template id="web_dynamic_field_snippet" name="Web Dynamic Field Snippet" inherit_id="website.snippets">
         <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
             <div>
                 <div class="oe_snippet_thumbnail">
                     <img class="oe_snippet_thumbnail_img" src="/web_dynamic_reporting/static/img/blocks/block_title.png"/>
-                    <span class="oe_snippet_thumbnail_title">Empty snippet</span>
+                    <span class="oe_snippet_thumbnail_title">Web Dynamic Field Snippet</span>
                 </div>
                 <section class="oe_snippet_body emptysnippet" data-screen-name="OpenERP" data-limit="15">
-                    <div class="col-md-4">
-                        <h3>Client Name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<!--                         <span t-call="doc.name"/> -->
+                    <div class="col-md-12">
+                        <h3 align="center">Selected Field Value</h3>
                     </div> 
+                </section>
+            </div>
+        </xpath>
+    </template>
+    <template id="web_dynamic_table_snippet" name="Web Dynamic Table Snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/web_dynamic_reporting/static/img/blocks/block_panel.png"/>
+                    <span class="oe_snippet_thumbnail_title">Web Dynamic Table Snippet</span>
+                </div>
+                <section class="oe_snippet_body emptysnippet" data-screen-name="OpenERP" data-limit="15">
+                    <div class="col-md-12">
+                        <table class="table table-condensed" style="width:100%">
+                          <tr>
+                            <th>Field 1</th>
+                            <th>Field 2</th> 
+                            <th>Field 3</th>
+                          </tr>
+                          <tr>
+                            <td>Field 1 Content</td>
+                            <td>Field 2 Content</td> 
+                            <td>Field 3 Content</td>
+                          </tr>
+                          <tr>
+                            <td>Field 1 Content</td>
+                            <td>Field 2 Content</td> 
+                            <td>Field 3 Content</td>
+                          </tr>
+                           <tr>
+                            <td>Field 1 Content</td>
+                            <td>Field 2 Content</td> 
+                            <td>Field 3 Content</td>
+                          </tr>
+                        </table>
+                    </div> 
+                </section>
+            </div>
+        </xpath>
+    </template>
+    <template id="web_dynamic_table_fields_snippet" name="Web Dynamic Table Fields Snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/web_dynamic_reporting/static/img/blocks/block_panel.png"/>
+                    <span class="oe_snippet_thumbnail_title">Web Dynamic Table Fields Snippet</span>
+                </div>
+                <section class="oe_snippet_body emptysnippet" data-screen-name="OpenERP" data-limit="15">
+                    <div class="col-md-12">
+                        <ul>
+                            <t t-foreach="res_company._fields" t-as="fields">
+                                <li><span t-esc="fields"/></li>
+                            </t>
+                        </ul>
+                    </div> 
+                </section>
+            </div>
+        </xpath>
+    </template>
+    <template id="web_dynamic_page_break_snippet" name="Web Dynamic Page Break Snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/web_dynamic_reporting/static/img/blocks/block_separator.png"/>
+                    <span class="oe_snippet_thumbnail_title">Web Dynamic Page Break Snippet</span>
+                </div>
+                <section class="oe_snippet_body emptysnippet" data-screen-name="OpenERP" data-limit="15">
+                    <div class="col-md-12">
+                        <p style="page-break-after:always;"></p>
+                    </div>
                 </section>
             </div>
         </xpath>

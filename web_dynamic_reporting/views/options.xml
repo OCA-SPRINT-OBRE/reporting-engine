@@ -1,18 +1,20 @@
 <openerp>
 <data>
-    <template id="website_empty_snippet_opt" name="Snippet Empty Options" inherit_id="website.snippet_options">
-      <xpath expr="//div[@data-js='background']" position="inside">
-        <li class="dropdown-submenu">
-            
-                <a href="#">Options</a>
-                <ul class="dropdown-menu">
-                    <t t-foreach="res_company._fields" t-as="fields">
-                        <li><span t-esc="fields"/></li>
-                    </t>
-                </ul>
-           
-        </li>
-      </xpath>
+    <template id="web_dynamic_field_snippet_opt" name="Web Dynamic Field Snippet Options" inherit_id="website.snippet_options">
+          <xpath expr="//div[@data-js='background']" position="after">
+                <!-- data-js="colorpicker"  -->
+                <div data-js="web_dynamic_field_snippet_options" data-selector="section:not(.jumbotron), :not(.o_gallery &gt; .container) &gt; .carousel, .parallax">  
+                    <li class="dropdown-submenu">
+                        <a href="#">My Fields</a><!-- Options group -->
+                        <ul class="dropdown-menu">
+                            <t t-foreach="res_company._fields" t-as="fields">
+                                <li><span t-esc="fields"/></li>
+                            </t>
+                        </ul>
+                    </li>
+                    <li data-images_add="true"> <a>Add Field</a></li>
+                </div>
+          </xpath>
     </template>
 </data>
 </openerp>
